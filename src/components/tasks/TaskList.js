@@ -15,7 +15,7 @@ export const TaskList = () => {
       .then((taskArray) => {
         setTasks(taskArray);
       });
-  }, [tasks]);
+  }, []);
 
   return (
     <>

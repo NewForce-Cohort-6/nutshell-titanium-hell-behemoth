@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
+import { Message } from "./message"
+import { MessageForm } from "./messageForm"
 import "./messages.css"
 
 
@@ -27,15 +29,11 @@ export const MessageList = () => {
 
                 messages.map(
                     (message) => {
-                        return <section className="message" key={`message--${message.id}`}>
-                            <div>{message?.user?.username}: {message.contents}</div>
-                            {/* <Link to={`/messages/${message.id}/edit`}>Edit</Link> */}
-
-                        </section>
+                        return <Message changeState={setMessages} message={message} />
                     }
                 )
             }
-            <button className="nut__Button" onClick={() => navigate("/message/create")}>Chat</button>
+            <MessageForm changeState={setMessages}/>
         </article>
     </>
 }

@@ -45,6 +45,39 @@
       "contents": "New Message",
       "timeStamp": 1660841683662,
       "id": 4
+    },
+    {
+      "userId": 2,
+      "contents": "I promise i can't spell",
+      "timeStamp": 1660844135241,
+      "id": 5,
+      "user": {
+        "id": 2,
+        "username": "Eleven",
+        "email": "eleven@email.com"
+      }
+    },
+    {
+      "userId": 2,
+      "contents": "Tommy was here",
+      "timeStamp": 1660844486610,
+      "id": 6,
+      "user": {
+        "id": 2,
+        "username": "Eleven",
+        "email": "eleven@email.com"
+      }
+    },
+    {
+      "userId": 2,
+      "contents": "It Works!!!",
+      "timeStamp": 1660844709624,
+      "id": 7,
+      "user": {
+        "id": 2,
+        "username": "Eleven",
+        "email": "eleven@email.com"
+      }
     }
   ],
   "events": [

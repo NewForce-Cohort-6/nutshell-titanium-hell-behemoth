@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-export const MessageForm = () => {
+export const MessageForm = ({changeState}) => {
     /*
         TODO: Add the correct default properties to the
         initial state object
@@ -35,13 +35,15 @@ export const MessageForm = () => {
         })
             .then(response => response.json())
             .then(() => {
-                navigate("/")
+                fetch("http://localhost:8088/messages?_expand=user")
+                .then(r => r.json())
+                .then(newsList => changeState(newsList))
             });
     };
 
     return (
         <form className="messageForm">
-            <h3 className="messageForm__title">New Message</h3>
+            {/* <h3 className="messageForm__title">New Message</h3> */}
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="contents"></label>
